@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EduShare Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>EduShare Platform</h1>
+        </header>
+
+        <div class="tab-container">
+            <div id="accountTab" class="tab active">Account</div>
+            <div id="uploadTab" class="tab">Upload Resource</div>
+            <div id="tutorialTab" class="tab">Share Tutorial</div>
+            <div id="researchTab" class="tab">Share Research</div>
+            <div id="resourcesTab" class="tab">View Resources</div>
+        </div>
+
+        <div id="accountDashboard" class="dashboard-container active-dashboard">
+            <h2>Account Management</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Enter Username" required>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+
+        <div id="uploadDashboard" class="dashboard-container">
+            <h2>Upload New Resource</h2>
+            <form id="uploadForm">
+                <input type="text" id="title" placeholder="Resource Title" required>
+                <textarea id="description" placeholder="Resource Description" rows="4" required></textarea>
+                <input type="url" id="ipfsHash" placeholder="Resource Link (IPFS/URL)" required>
+                <button type="submit">Upload Resource</button>
+            </form>
+        </div>
+
+        <div id="tutorialDashboard" class="dashboard-container">
+            <h2>Share Tutorial</h2>
+            <form id="tutorialForm">
+                <input type="text" id="tutorialTitle" placeholder="Tutorial Title" required>
+                <textarea id="tutorialDescription" placeholder="Tutorial Description" rows="4" required></textarea>
+                <input type="url" id="tutorialLink" placeholder="Tutorial Link" required>
+                <button type="submit">Share Tutorial</button>
+            </form>
+        </div>
+
+        <div id="researchDashboard" class="dashboard-container">
+            <h2>Share Research Article</h2>
+            <form id="researchForm">
+                <input type="text" id="researchTitle" placeholder="Research Article Title" required>
+                <textarea id="researchDescription" placeholder="Description" rows="4" required></textarea>
+                <input type="url" id="researchLink" placeholder="Research Link" required>
+                <button type="submit">Share Research Article</button>
+            </form>
+        </div>
+
+        <div id="viewDashboard" class="dashboard-container">
+            <div class="user-greeting">
+                Welcome, <span id="userAddress"></span>
+            </div>
+            <h2>Shared Resources</h2>
+            <div id="resourcesContainer" class="resources"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
