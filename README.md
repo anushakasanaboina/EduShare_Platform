@@ -9,11 +9,6 @@ EduShare Platform is a lightweight, front-end web application that allows users 
 
 All data is stored locally in the browser using `localStorage`—no backend or authentication needed.
 
----
-
-## 🌐 Demo
-
-![screenshot](screenshot.png) <!-- optional, if you add an image -->
 
 ---
 
