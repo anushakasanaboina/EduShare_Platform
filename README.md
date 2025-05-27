@@ -50,4 +50,4 @@ EduShare-Platform/
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com//edushare-platform.git
+   git clone https://github.com/anushakasanaboina/EduShare_Platform.git
